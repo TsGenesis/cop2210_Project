@@ -1,1 +1,123 @@
+import java.util.Scanner;
+import java.util.Random;
 
+public class Project
+{
+    public static void main(String[] args)
+    {
+        Scanner in = new Scanner(System.in);
+        int sum = 0;
+        int choice = 0;
+        
+        do{
+        System.out.println("Enter a number: ");
+        System.out.println("1)Populate array\n2)Display Array\3)Minimum\n4)Maximum"
+                + "\n5)Range\n6)Mode\n7)Mean\n8)Standard Deviation\n9)Exit");
+        
+        choice = in.nextInt();
+        
+        switch(choice) {
+            case 1:
+                
+                System.out.println("Enter array length: ");
+                int arrayLength = in.nextInt();
+        
+                Random r = new Random();
+                int[]sal = new int [arrayLength];
+        
+                for(int i=0; i<sal.length; i++){
+                sal[i] = r.nextInt(30000)+30000;
+                }
+                
+                for(int i : sal) {
+                System.out.println(i + " ");
+                sum += i;
+                }
+                
+                System.out.println("mean= " + sum);
+        
+                double mean = sum/arrayLength;
+        
+                for(int i : sal) {
+                double standardDeviation = 0;
+                standardDeviation += Math.pow(i - mean, 2);
+                System.out.println("Standard Deviation= " + standardDeviation);
+                }
+                
+                System.out.println();
+                
+                break;
+            
+            case 2:
+                
+                // choice 2 code goes here
+                
+                System.out.println();
+                                
+                break;
+                
+            case 3:
+                
+                // choice 3 code goes here
+                
+                System.out.println();
+                
+                break;
+                 
+            case 4:
+                
+                // choice 4 code goes here
+                
+                System.out.println();
+                
+                break;
+                 
+            case 5:
+                
+                // choice 5 code goes here
+                break;
+                
+            case 6:
+                
+                // choice 6 code goes here
+                
+                System.out.println();
+                
+                break;
+                
+            case 7:
+                
+                // choice 7 code goes here
+                
+                System.out.println();
+                
+                break;
+                
+            case 8:
+                
+                // choice 8 code goes here
+                
+                System.out.println();
+                
+                break;
+                
+            default:
+                
+                System.out.println("Please enter an integer between 1 and 9");
+                
+                System.out.println();
+                
+                break;
+
+        }    
+        }
+        while(choice != 9);
+        
+        if (choice == 9)
+        {
+            System.out.println();
+            
+            System.out.println("You have exited.");   
+        }
+        }
+        }
