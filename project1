@@ -75,6 +75,9 @@ public class Project
             case 5:
                 
                 // choice 5 code goes here
+                
+                System.out.println();
+                
                 break;
                 
             case 6:
